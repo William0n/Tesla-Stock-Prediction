@@ -62,9 +62,12 @@ modelLSTM = tf.keras.Sequential([
     ])
  ```
 ## Results
+**LSTM RMSE Train:** 19.133 </br>
+**LSTM RMSE Test:** 343.070 </br>
 
-lstm rmse test :343.070
-lstm rmse train: 19.133
+**Simple RNN RMSE Train:** 15.870 </br>
+**Simple RNN RMSE Test:** 517.240
 
-rnn rmse test: 517.240
-rnn rmse train: 15.870
+<img src="imgs/Model Loss Plot fix.png"  width = 500/>
+
+<img src="imgs/Prediction plot.png"  width = 500/>
