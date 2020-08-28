@@ -61,13 +61,19 @@ modelLSTM = tf.keras.Sequential([
     tf.keras.layers.Dense(1)
     ])
  ```
-## Results
+## Model Performance 
 **LSTM RMSE Train:** 19.133 </br>
 **LSTM RMSE Test:** 343.070 </br>
 
 **Simple RNN RMSE Train:** 15.870 </br>
 **Simple RNN RMSE Test:** 517.240
 
-<img src="imgs/Model Loss Plot fix.png"  width = 500/>
+<img src="imgs/Model Loss Plot fix.png"  width = 400/>
 
-<img src="imgs/Prediction plot.png"  width = 500/>
+## Conclusion 
+After plotting some predictions using the 2 model, it became quite clear that perhaps the 2 created models suffered from the classic problem of over fitting to the training set; this can be seen by comparing the `yellow lines` with the `blue lines`. The simple RNN model was able to predict training set data better than the LSTM model, but it could not generalize as well as the LSTM model on the test set. As seen in the graphs below, the `simple RNN model (left graph)` had predictions which appeared rather flat, whereas, the `LSTM model (right graph)` showed predictions which had slight resemblances to the pattern found in the actual data. Although I was already expecting this result on the test set, it was quite surprising for me to see the model with simple RNN layers to outperform the LSTM model on the training set. 
+
+Nonetheless, this was a very fun project and although my dreams of becoming a multi-millionaire using RNNs on stock prices are looking rather dim, I did manage to learn quite a few things about LSTM/RNN modeling.
+
+
+<img src="imgs/Prediction plot.png"  width = 600/>
