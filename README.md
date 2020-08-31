@@ -2,7 +2,9 @@
 
 ## Introduction 
 
-What better way to get rich than learn
+For this particular project, my goal is to apply Reccurent Neural Networks (RNN) on Tesla stock closing prices; more specifically, I will create 2 models which utilize different types of hidden layers in the tensorflow/keras package in python. Hopefully one of these models are able to accurately predict the stock data on the test set and allows me to become the next Wolf on Wallstreet. 
+
+
 ## Packages and Resources Used 
 **Packages:**
   * Tensorflow/keras
@@ -73,7 +75,7 @@ modelLSTM = tf.keras.Sequential([
 ## Conclusion 
 After plotting some predictions using the 2 model, it became quite clear that perhaps the 2 created models suffered from the classic problem of over fitting to the training set; this can be seen by comparing the `yellow lines` with the `blue lines`. The simple RNN model was able to predict training set data better than the LSTM model, but it could not generalize as well as the LSTM model on the test set. As seen in the graphs below, the `simple RNN model (left graph)` had predictions which appeared rather flat, whereas, the `LSTM model (right graph)` showed predictions which had slight resemblances to the pattern found in the actual data. Although I was already expecting this result on the test set, it was quite surprising for me to see the model with simple RNN layers to outperform the LSTM model on the training set. 
 
-Nonetheless, this was a very fun project and although my dreams of becoming a multi-millionaire using RNNs on stock prices are looking rather dim, I did manage to learn quite a few things about LSTM/RNN modeling.
+Nonetheless, this was a very fun project and although my dreams of becoming the next Wolf on Wallstreet using RNNs on stock prices are looking rather dim, I did manage to learn quite a few things about LSTM/RNN modeling.
 
 
 <img src="imgs/Prediction plot.png"  width = 600/>
