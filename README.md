@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-For this particular project, my goal is to apply Reccurent Neural Networks (RNN) on Tesla stock closing prices; more specifically, I will create 2 models which utilize different types of hidden layers in the tensorflow/keras package in python. Hopefully one of these models are able to accurately predict the stock data on the test set and allows me to become the next Wolf on Wallstreet. 
+For this particular project, my goal is to apply Recurrent Neural Networks (RNN) on Tesla stock closing prices; more specifically, I will create 2 models which utilize different types of hidden layers in the tensorflow/keras package in python. Hopefully one of these models are able to accurately predict the stock data on the test set and allows me to become the next Wolf on Wallstreet. 
 
 
 ## Packages and Resources Used 
@@ -23,14 +23,14 @@ After collecting the 3 year stock prices of Tesla (20/07/2017 to 20/07/2020), th
 changes carried out: 
 
   * Created a `Values` vector which contains the closing prices 
-  * Splitted the data into training and test set using a 80/20 split. As this is sequential data the training set contains the first 80% of the full data
+  * The data was split into training and test set using a 80/20 split. As this is sequential data the training set contains the first 80% of the full data
   * Training data was scaled between values 0 and 1 using `MinMaxScaler` 
   * Training and Test sets were reshaped into a 3-d array to fit the expected input shape of the RNN layer 
 ## Modeling 
 
 As this was my first real attempt at using nerual networks on sequential data, I wanted to experiment with 2 slightly different layers offered in tensorflow. 
 The first model which was used as a baseline model included `simpleRnn` layers, and the second model used `LSTM` layers. For each model, I included a 20% drop out layer after each RNN layer in hopes of reducing the model
-overfitting the data. 
+over fitting the data. 
 
 For both models, I chose to use the RMSE metricc as I felt that significant outliers needed to be penalized harder in order to properly evaluate the models' accuracy
 
